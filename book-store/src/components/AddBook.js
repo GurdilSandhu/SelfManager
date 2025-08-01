@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./AddBook.css";
+const BASE_URL = "https://shelfmanager-backend.onrender.com";
 
 const AddBook = () => {
   const [book, setBook] = useState({
@@ -23,7 +24,7 @@ const AddBook = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/books", book);
+      await axios.post("${BASE_URL}/books", book);
       alert("Book added successfully!");
       setBook({
         name: "",
