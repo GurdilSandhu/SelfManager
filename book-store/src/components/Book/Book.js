@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+const BASE_URL = "https://shelfmanager-backend.onrender.com";
 
 const Book = (props) => {
   const { _id, name, author, description, price, image } = props.book
@@ -13,7 +14,7 @@ const Book = (props) => {
   if (!confirmDelete) return;
 
   try {
-    await axios.delete(`http://localhost:5000/books/${_id}`);
+    await axios.delete(`${BASE_URL}/books/${_id}`);
     window.location.reload();
    navigate("/books");
   } catch (err) {
