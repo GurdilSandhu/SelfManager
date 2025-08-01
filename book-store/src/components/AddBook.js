@@ -24,7 +24,7 @@ const AddBook = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("${BASE_URL}/books", book);
+      await axios.post(`${BASE_URL}/books`, book);
       alert("Book added successfully!");
       setBook({
         name: "",
