@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+const BASE_URL = "https://shelfmanager-backend.onrender.com";
 
 const BookDetail = () => {
   const [book, setBook] = useState({
@@ -18,7 +19,7 @@ const BookDetail = () => {
   useEffect(() => {
     const fetchHandler = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/books/${id}`);
+        const res = await axios.get(`${BASE_URL}/books/${id}`);
         setBook(res.data.book);
       } catch (error) {
         console.error("Failed to fetch book:", error);
@@ -38,7 +39,7 @@ const BookDetail = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/books/${id}`, book);
+      await axios.put(`${BASE_URL}/books/${id}`, book);
       alert("Book updated successfully!");
       navigate("/books");
     } catch (error) {
