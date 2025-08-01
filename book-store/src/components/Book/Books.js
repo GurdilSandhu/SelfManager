@@ -3,7 +3,9 @@ import './Book.css'
 import axios from 'axios';
 import Book from './Book';
 
-const URL = "http://localhost:5000/books"
+const BASE_URL = "https://shelfmanager-backend.onrender.com";
+
+const URL = "${BASE_URL}/books"
 
 const fetchHandler = async () => {
   return await axios.get(URL).then((res) => res.data)
