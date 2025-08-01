@@ -1,0 +1,60 @@
+.add-book-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+}
+
+.add-book-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-book-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.add-book-form input,
+.add-book-form textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.checkbox label {
+    font-weight: bold;
+}
+
+
+.add-book-form input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-book-form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(31, 75, 122);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-book-form button:hover {
+    background-color: #1e364e;
+}
